@@ -1,17 +1,40 @@
 <template>
   <div class="my-leagues">
-    <div class="header bg-gray-300 py-2">Leagues available</div>
+    <div class="header bg-gray-300 py-2">
+      Leagues available
+    </div>
     <div class="list-leagues mt-4">
-      <div class="ligue p-1"> <League /> </div>
+      <div class="league p-1">
+        <League />
+      </div>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
+
 import League from '@/components/League'
 export default {
   name: 'Leagues',
-  components: { League }
+  components: { League },
+  props:{
+    champions:{required:true}
+  },
+  data(){
+    return {
+      pres:'mwaa'
+    }
+  },
+  computed:{
+    usableLeagues(){
+      // return JSON.parse(this.leagues)
+      return this.champions
+    }
+  },
+  mounted () {
+    console.log(this.usableLeagues,'=>',this.champions)
+  }
 }
 </script>
 

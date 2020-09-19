@@ -70,9 +70,9 @@ export default {
   ** See https://axios.nuxtjs.org/options
   */
   axios: {
-    BaseURL: 'https://v2.api-football.com/',
+    baseURL: 'https://v2.api-football.com/',
     headers: {
-      'x-rapidapi-host': 'v3.football.api-sports.io',
+      'x-rapidapi-host': 'https://v2.api-football.com/',
       'x-rapidapi-key': '3219e0b923f5ee4950c447f11208c67e'
     }
   },

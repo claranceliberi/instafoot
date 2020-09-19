@@ -1,4 +1,6 @@
 <template>
+<!--  eslint-disable-->
+
   <div class="my-container">
     <!--    navbar-->
     <div class="navbar-container flex">
@@ -7,7 +9,7 @@
 
     <!--     side bar (leagues ) and main div (with necessary information)-->
     <div class="content-container pt-10 flex">
-      <div class="w-1/4 "> <Leagues /> </div>
+      <div class="w-1/4 "> <Leagues :champions="champions"/> </div>
       <div class="w-1/8 h-12"></div>
     </div>
 
@@ -15,9 +17,25 @@
 </template>
 
 <script>
+/* eslint-disable */
+
 import Leagues from '@/components/Leagues'
+import navbar from '@/components/Navbar'
 export default {
-  components: { Leagues }
+  name:"Index",
+  components: { Leagues,navbar },
+  asyncData({$axios},callback){
+    console.log('the shit executed')
+    $axios.get(`${$axios.defaults.baseURL}leagues`).then(d => {
+      console.log(d)
+      callback(null,{champions:d})
+    })
+
+  },
+  mounted () {
+    console.log(this.champions)
+  }
+
 }
 </script>
 
