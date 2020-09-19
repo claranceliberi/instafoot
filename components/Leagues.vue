@@ -4,8 +4,8 @@
       Leagues available
     </div>
     <div class="list-leagues mt-4">
-      <div class="league p-1">
-        <League />
+      <div class="league p-1" v-for="(lig,i) in usableLeagues" :key="i">
+        <League :champion="lig"/>
       </div>
     </div>
   </div>
@@ -18,9 +18,6 @@ import League from '@/components/League'
 export default {
   name: 'Leagues',
   components: { League },
-  props:{
-    champions:{required:true}
-  },
   data(){
     return {
       pres:'mwaa'
@@ -28,11 +25,10 @@ export default {
   },
   computed:{
     usableLeagues(){
-      return this.champions.api.leagues
+      return this.$store.state.leagues.loadedLeagues
     }
   },
   mounted () {
-    console.log(this.usableLeagues,'=>',this.champions)
   }
 }
 </script>
