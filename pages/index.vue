@@ -9,7 +9,7 @@
 
     <!--     side bar (leagues ) and main div (with necessary information)-->
     <div class="content-container pt-10 flex">
-      <div class="w-1/4 "> <Leagues :champions="champions"/> </div>
+      <div class="w-1/4 "> <Leagues /> </div>
       <div class="w-1/8 h-12"></div>
     </div>
 
@@ -24,15 +24,11 @@ import navbar from '@/components/Navbar'
 export default {
   name:"Index",
   components: { Leagues,navbar },
-  asyncData({$axios},callback){
-    $axios.get(`${$axios.defaults.baseURL}leagues`).then(d => {
-      // console.log(d)
-      callback(null,{champions:d.data})
-    })
-
+  async asyncData({$axios,store}){
+    let {data} = await $axios.get(`${$axios.defaults.baseURL}leagues`)
+    store.commit('leagues/storeLoadedLeagues',data.api.leagues)
   },
   mounted () {
-    console.log(this.champions)
   }
 
 }
