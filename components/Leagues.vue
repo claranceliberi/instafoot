@@ -28,8 +28,7 @@ export default {
   },
   computed:{
     usableLeagues(){
-      // return JSON.parse(this.leagues)
-      return this.champions
+      return this.champions.api.leagues
     }
   },
   mounted () {

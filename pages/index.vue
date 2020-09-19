@@ -25,10 +25,9 @@ export default {
   name:"Index",
   components: { Leagues,navbar },
   asyncData({$axios},callback){
-    console.log('the shit executed')
     $axios.get(`${$axios.defaults.baseURL}leagues`).then(d => {
-      console.log(d)
-      callback(null,{champions:d})
+      // console.log(d)
+      callback(null,{champions:d.data})
     })
 
   },
