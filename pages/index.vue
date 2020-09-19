@@ -1,7 +1,7 @@
 <template>
 <!--  eslint-disable-->
 
-  <div class="my-container">
+  <div class="my-container bg-gray-100">
     <!--    navbar-->
     <div class="navbar-container flex">
       <div class="navbar w-full"> <navbar /> </div>

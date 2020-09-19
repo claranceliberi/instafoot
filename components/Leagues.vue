@@ -1,5 +1,5 @@
 <template>
-  <div class="my-leagues">
+  <div class="my-leagues bg-white rounded-md">
     <div class="header bg-gray-300 py-2">
       Leagues available
     </div>

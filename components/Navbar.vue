@@ -1,5 +1,5 @@
 <template>
-  <div class="my-navbar bg-white-100 flex pt-2">
+  <div class="my-navbar bg-white flex p-2">
     <div class="w-full flex">
       <div class="logo-holder w-1/3 sm:w-1/3 md:w-1/3 lg:w-1/3 xl:w-1/3"> <div class="logo">Insta Foot</div> </div>
       <div class="space  md:w-1/2 lg:w-1/6 xl:w-16"></div>
@@ -44,7 +44,7 @@ export default {
         display: flex;
 
         li{
-          padding: .2rem .7rem;
+          padding: .5rem 1.5rem;
           cursor: pointer;
           min-width: 5rem;
           text-align: center;
