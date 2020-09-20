@@ -5,11 +5,11 @@
       <div class="space  md:w-1/2 lg:w-1/6 xl:w-16"></div>
       <div class="links w-1/7 sm:w-2/3 md:w-1/7 lg:w-1/7 xl:w-1/9">
         <ul>
-          <li>Live</li>
-          <li>Scores</li>
-          <li>Fixtures</li>
-          <li>Tables</li>
-          <li>Leagues</li>
+          <li> <nuxt-link to="/live">Live</nuxt-link> </li>
+          <li> <nuxt-link to="/scores">Scores</nuxt-link> </li>
+          <li> <nuxt-link to="/fixtures">Fixtures</nuxt-link> </li>
+          <li> <nuxt-link to="/tables">Tables</nuxt-link> </li>
+          <li> <nuxt-link to="/leagues">Leagues</nuxt-link> </li>
         </ul>
       </div>
     </div>

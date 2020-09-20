@@ -25,7 +25,7 @@ export default {
   },
   computed:{
     usableLeagues(){
-      return this.$store.state.leagues.loadedLeagues
+      return this.$store.state.leagues.loadedLeagues.slice(0,50)
     }
   },
   mounted () {

@@ -10,7 +10,7 @@
     <!--     side bar (leagues ) and main div (with necessary information)-->
     <div class="content-container pt-10 flex">
       <div class="w-1/4 "> <Leagues /> </div>
-      <div class="w-1/8 h-12"></div>
+      <div class="w-1/8 h-12"> <nuxt-child /> </div>
     </div>
 
   </div>
