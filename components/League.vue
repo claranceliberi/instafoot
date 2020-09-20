@@ -1,7 +1,7 @@
 <template>
   <div class="my-league flex pb-1">
-    <div class="logo w-1/3"><img :src="champion.logo" alt="logo"></div>
-    <div class="name w-2/3 ">{{champion.name}}</div>
+    <div class="logo w-1/4"><img :src="champion.logo" alt="logo"></div>
+    <div class="name w-3/4 ">{{champion.name}}</div>
   </div>
 </template>
 
@@ -26,8 +26,8 @@ export default {
     display: flex;
     align-content: center;
     img{
-      max-height: 50px;
-      max-width: 50px;
+      max-height: 35px;
+      max-width: 35px;
     }
   }
 

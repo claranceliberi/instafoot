@@ -1,5 +1,5 @@
 <template>
-  <div class="my-leagues bg-white rounded-md">
+  <div class="my-leagues bg-white">
     <div class="header bg-gray-300 py-2">
       Leagues available
     </div>
@@ -35,6 +35,7 @@ export default {
 
 <style lang="scss" scoped>
 .my-leagues{
+  border-radius: 10px;
   .header{
     text-align: center;
     font-size: 1.2rem;
